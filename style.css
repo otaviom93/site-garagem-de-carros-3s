@@ -720,9 +720,9 @@ button.botao-vender-pagina:hover {
     margin: auto;
   }
   button.botao-vender-pagina {
-    padding: 0.75rem 9rem; /* Reduz o padding */
-    min-width: 10rem; /* Reduz a largura mínima */
-    font-size: 0.9rem; /* Reduz o tamanho da fonte */
+    padding: 0.75rem 9rem; 
+    min-width: 10rem; 
+    font-size: 0.9rem; 
   }
   .form-container {
     max-width: 82%;
