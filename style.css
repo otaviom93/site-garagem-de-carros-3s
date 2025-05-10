@@ -607,23 +607,38 @@ button.botao-vender-pagina {
 button.botao-vender-pagina:hover {
   background-color: #585858 !important;
 }
-.container-carro {
-  display: block;
-  flex-wrap: wrap; /* caso queira responsividade */
-  gap: 20px;
-}
 
 .form-container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 30px auto;
+  align-items: center;
+  max-width: 1310px;
+  margin: 20px auto; 
+  padding: 20px ;
   background-color: var(--cor-fundo-claro);
-  padding: 20px 0px 20px 35px;
+  border-radius: 12px;
   border-radius: 10px;
   border: 2px solid var(--cor-complementar);
-  box-sizing: border-box;
+ 
+}
+.form-container button {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  margin: 15px auto;
+  border-radius: 30px;
+  padding: 15px 70px;
+  background-color: var(--cor-complementar);
+  color: #fff;
+  border:none;
+  width: auto;
+  text-align: center;
+  white-space: nowrap;
 }
 
+.form-container button:hover {
+  background-color: #585858;
+  border-color: #585858;
+  cursor: pointer;
+}
 
 /* responsividade */
 
@@ -709,7 +724,11 @@ button.botao-vender-pagina:hover {
     min-width: 10rem; /* Reduz a largura mínima */
     font-size: 0.9rem; /* Reduz o tamanho da fonte */
   }
-
+  .form-container {
+    max-width: 82%;
+    padding: 12px;
+    margin:  0px auto 20px; 
+  }
 }
 @media (max-width: 720px) { 
   .container-slider {
@@ -777,6 +796,11 @@ button.botao-vender-pagina:hover {
   
   .opcionais-grid {
     grid-template-columns: 1fr 1fr;
+  }
+  .form-container {
+    max-width: 82%;
+    padding: 12px;
+    margin:  0px auto 20px; 
   }
 }
 @media (max-width: 570px) {  

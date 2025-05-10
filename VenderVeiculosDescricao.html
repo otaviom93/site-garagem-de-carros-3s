@@ -46,6 +46,7 @@
       </div>
       <button id="next-button"><img src="arrow.png"></button>
   </div>
+   
   <script>
       const slider = document.querySelectorAll('.slider');
       const btnprev = document.getElementById('prev-button');
@@ -105,43 +106,49 @@
           <div><span class="label">Licenciado</span><strong>Sim</strong></div>
           </div>
       </div>
+    </div>
       <!--fim dos destaque veiculos-->
       <div class="form-container">
         <form id="vendaForm">
+          <div class="form-row">
             <div class="form-group">
-                <label for="troca">Terá veículo na troca?</label>
-                <select id="troca" required>
-                    <option value="" disabled selected>Selecione</option>
-                    <option value="sim">Sim</option>
-                    <option value="nao">Não</option>
-                </select>
+              <label for="troca">Terá veículo na troca?</label>
+              <select id="troca" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+              </select>
             </div>
-            
-            <!-- Grupo do Dinheiro (SEMPRE visível) -->
+      
             <div class="form-group">
-                <label for="valorDinheiro">Valor de venda (R$)</label>
-                <input type="number" id="valorDinheiro" min="0" step="0.01" placeholder="00.000,00" required>
+              <label for="valorDinheiro">Valor de venda (R$)</label>
+              <input type="number" id="valorDinheiro" min="0" step="0.01" placeholder="00.000,00" required>
             </div>
-            
-            <!-- Grupo da Troca (só aparece se Sim) -->
-            <div id="grupoTroca" class="valor-group">
-                <div class="form-group">
-                    <label for="valorTroca">Valor do veículo na troca (R$)</label>
-                    <input type="number" id="valorTroca" min="0" step="0.01" placeholder="00.000,00">
-                </div>
+          </div>
+      
+          <!-- Grupo da Troca (só aparece se Sim) -->
+          <div id="grupoTroca" class="valor-group">
+            <div class="form-group">
+              <label for="valorTroca">Valor do veículo na troca (R$)</label>
+              <input type="number" id="valorTroca" min="0" step="0.01" placeholder="00.000,00">
             </div>
-            
+      
+            <div class="form-group">
+              <label for="descricaoTroca">Descrição do veículo na troca</label>
+              <input type="text" id="descricaoTroca" placeholder="Ex: Corsa 2010 preto, bom estado">
+            </div>
+          </div>
+            <a href="index.html">
             <button type="submit" id="btnConfirmar">CONFIRMAR VENDA</button>
+            </a>
         </form>
-    </div>
+      </div>
 
     <script>
         const selectTroca = document.getElementById('troca');
         const grupoTroca = document.getElementById('grupoTroca');
         const btnConfirmar = document.getElementById('btnConfirmar');
         const valorDinheiro = document.getElementById('valorDinheiro');
-        
-        // Configuração inicial
         grupoTroca.style.display = 'none';
         btnConfirmar.style.display = 'none';
         
@@ -154,7 +161,7 @@
                 document.getElementById('valorTroca').removeAttribute('required');
             }
             
-            // Mostra o botão após qualquer seleção
+            
             btnConfirmar.style.display = 'block';
         });
         
@@ -164,16 +171,15 @@
             const temTroca = selectTroca.value === 'sim';
             const valorVenda = parseFloat(valorDinheiro.value) || 0;
             
-            let mensagem = `Valor de venda: R$ ${valorVenda.toFixed(2)}`;
+            
             
             if(temTroca) {
                 const valorTroca = parseFloat(document.getElementById('valorTroca').value) || 0;
-                mensagem += `\nValor da troca: R$ ${valorTroca.toFixed(2)}` +
-                            `\nValor total: R$ ${(valorVenda + valorTroca).toFixed(2)}`;
+
             }
             
-            alert(mensagem);
-            // Aqui você pode adicionar o envio do formulário
+            window.location.href = 'index.html';
+            
         });
     </script>
 </body>
