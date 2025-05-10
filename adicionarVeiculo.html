@@ -1,12 +1,401 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
-    <title>Adicionar Veículo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adicionar Veículo - OVG Veículos</title>
+
 </head>
 <body>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OVG Veiculos</title>
+  
+</head>
+<body>
+  <!--nav bar-->
+  <header class="header">
+    <nav class="nav">
+      <img src="logo mirela-Photoroom.png" class="logo" >
+      <button class="hamburger" aria-label="Menu">
+        <span></span>
+
+      </button>
+      <ul class="nav-list">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="#">VENDER VEICULO</a></li>
+        <li><a href="HistoriocoDeVendas.html">HISTORICO DE VENDAS</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector(".nav");
+
+    hamburger.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
+  <!--fim da nav bar-->
+
+  <div class="form-container">
+    <h1>Adicionar Veículo</h1>
+    <form id="form-veiculo">
+      <!-- Campos de marca e modelo -->
+      <div class="form-group">
+        <label for="marca">Marca</label>
+        <select id="marca" required>
+          <option value="">Selecione a marca</option>
+          <option value="volkswagen">Volkswagen</option>
+          <option value="fiat">Fiat</option>
+          <option value="chevrolet">Chevrolet</option>
+          <option value="ford">Ford</option>
+          <option value="toyota">Toyota</option>
+          <option value="hyundai">Hyundai</option>
+          <option value="honda">Honda</option>
+          <option value="renault">Renault</option>
+          <option value="jeep">Jeep</option>
+          <option value="nissan">Nissan</option>
+          <option value="bmw">BMW</option>
+          <option value="mercedes-benz">Mercedes-Benz</option>
+          <option value="audi">Audi</option>
+          <option value="peugeot">Peugeot</option>
+          <option value="citroen">Citroën</option>
+          <option value="mitsubishi">Mitsubishi</option>
+          <option value="kia">Kia</option>
+          <option value="subaru">Subaru</option>
+          <option value="mazda">Mazda</option>
+          <option value="land-rover">Land Rover</option>
+          <option value="volvo">Volvo</option>
+          <option value="lexus">Lexus</option>
+          <option value="porsche">Porsche</option>
+          <option value="jaguar">Jaguar</option>
+          <option value="mini">Mini</option>
+          <option value="suzuki">Suzuki</option>
+          <option value="troller">Troller</option>
+        </select>
+
+      <div class="form-group">
+        <label for="modelo">Modelo</label>
+        <input type="text" id="modelo" required placeholder="Digite o modelo do veículo">
+      </div>
+
+      <!-- Anos em ORDEM DECRESCENTE (atual primeiro) -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="ano-fabricacao">Ano Fabricação</label>
+          <select id="ano-fabricacao" required>
+            <option value="">Selecione</option>
+            <!-- Preenchido por JavaScript em ordem decrescente -->
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="ano-modelo">Ano Modelo</label>
+          <select id="ano-modelo" required>
+            <option value="">Selecione</option>
+            <!-- Preenchido por JavaScript em ordem decrescente -->
+          </select>
+        </div>
+      </div>
+
+      <!-- Preço e Quilometragem -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="preco">Preço (R$)</label>
+          <input type="number" id="preco" required placeholder="Ex: 45000">
+        </div>
+        
+        <div class="form-group">
+          <label for="quilometragem">Quilometragem</label>
+          <input type="number" id="quilometragem" required placeholder="Ex: 50000">
+        </div>
+      </div>
+
+      <!-- 50 CORES BÁSICAS SEM SUBTONS -->
+      <div class="form-group">
+        <label for="cor">Cor</label>
+        <select id="cor" required>
+          <option value="">Selecione a cor</option>
+          <option value="preto">Preto</option>
+          <option value="branco">Branco</option>
+          <option value="prata">Prata</option>
+          <option value="cinza">Cinza</option>
+          <option value="vermelho">Vermelho</option>
+          <option value="azul">Azul</option>
+          <option value="verde">Verde</option>
+          <option value="amarelo">Amarelo</option>
+          <option value="laranja">Laranja</option>
+          <option value="marrom">Marrom</option>
+          <option value="bege">Bege</option>
+          <option value="dourado">Dourado</option>
+          <option value="vinho">Vinho</option>
+          <option value="roxo">Roxo</option>
+          <option value="rosa">Rosa</option>
+          <option value="champagne">Champagne</option>
+          <option value="grafite">Grafite</option>
+          <option value="perola">Pérola</option>
+          <option value="bronze">Bronze</option>
+          <option value="terracota">Terracota</option>
+          <option value="creme">Creme</option>
+          <option value="offwhite">Off White</option>
+          <option value="petroleo">Petróleo</option>
+          <option value="turquesa">Turquesa</option>
+          <option value="mostarda">Mostarda</option>
+          <option value="caramelo">Caramelo</option>
+          <option value="cobre">Cobre</option>
+          <option value="oliva">Oliva</option>
+          <option value="ferrugem">Ferrugem</option>
+          <option value="azul-marinho">Azul Marinho</option>
+          <option value="verde-militar">Verde Militar</option>
+          <option value="vermelho-ferrari">Vermelho Ferrari</option>
+          <option value="cinza-escuro">Cinza Escuro</option>
+          <option value="cinza-claro">Cinza Claro</option>
+          <option value="verde-limao">Verde Limão</option>
+          <option value="amarelo-ouro">Amarelo Ouro</option>
+          <option value="laranja-queimado">Laranja Queimado</option>
+          <option value="marrom-chocolate">Marrom Chocolate</option>
+          <option value="bege-areia">Bege Areia</option>
+          <option value="dourado-fosco">Dourado Fosco</option>
+          <option value="vinho-bordeaux">Vinho Bordeaux</option>
+          <option value="roxo-borgonha">Roxo Borgonha</option>
+          <option value="rosa-choque">Rosa Choque</option>
+          <option value="prata-metalico">Prata Metálico</option>
+          <option value="preto-fosco">Preto Fosco</option>
+          <option value="branco-gelo">Branco Gelo</option>
+          <option value="azul-noite">Azul Noite</option>
+          <option value="verde-bandeira">Verde Bandeira</option>
+          <option value="amarelo-canario">Amarelo Canário</option>
+          <option value="verde-oliva">Verde Oliva</option>
+          <option value="azul-turquesa">Azul Turquesa</option>
+          <option value="vermelho-rubi">Vermelho Rubi</option>
+        </select>
+      </div>
+
+      <!-- Restante do formulário -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cambio">Câmbio</label>
+          <select id="cambio" required>
+            <option value="">Selecione</option>
+            <option value="automatico">Automático</option>
+            <option value="manual">Manual</option>
+            <option value="automizado">Automizado</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="combustivel">Combustível</label>
+          <select id="combustivel" required>
+            <option value="">Selecione</option>
+            <option value="gasolina">Gasolina</option>
+            <option value="alcool">Álcool</option>
+            <option value="flex">Flex</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Itens opcionais como selects Sim/Não -->
+      <div class="form-group">
+        <h2>Itens Opcionais</h2>
+        <div class="opcionais-grid">
+            <div class="opcional-item">
+                <label>Airbag</label>
+                <select name="airbag">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Alarme</label>
+                <select name="alarme">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Ar condicionado</label>
+                <select name="ar-condicionado">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Ar quente</label>
+                <select name="ar-quente">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Banco com regulagem de altura</label>
+                <select name="banco-altura">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Computador de bordo</label>
+                <select name="computador-bordo">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Controle de tração</label>
+                <select name="controle-tracao">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Desembaçador traseiro</label>
+                <select name="desembacador-traseiro">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Encosto de cabeça traseiro</label>
+                <select name="encosto-cabeca">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Freio ABS</label>
+                <select name="freio-abs">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Controle automático de velocidade</label>
+                <select name="cruise-control">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Retrovisores elétricos</label>
+                <select name="retrovisores-eletricos">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Rodas de liga leve</label>
+                <select name="rodas-liga-leve">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Sensor de estacionamento</label>
+                <select name="sensor-estacionamento">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Retrovisor fotocrômico</label>
+                <select name="retrovisor-fotocromico">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Travas elétricas</label>
+                <select name="travas-eletricas">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Vidros elétricos</label>
+                <select name="vidros-eletricos">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Volante com regulagem de altura</label>
+                <select name="volante-regulavel">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>Bancos em couro</label>
+                <select name="bancos-couro">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+              
+              <div class="opcional-item">
+                <label>GPS</label>
+                <select name="gps">
+                  <option value="nao">Não</option>
+                  <option value="sim">Sim</option>
+                </select>
+              </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="fotos">Fotos do Veículo (Máx. 10)</label>
+        <input type="file" id="fotos" multiple accept="image/*" max="10">
+      </div>
+
+      <button type="submit">Cadastrar Veículo</button>
+    </form>
+  </div>
+
+  <script>
+    // Preencher anos em ORDEM DECRESCENTE (ano atual primeiro)
+    const anoAtual = new Date().getFullYear();
+    const selectFabricacao = document.getElementById('ano-fabricacao');
+    const selectModelo = document.getElementById('ano-modelo');
     
+    // Fabricação (1930 até ano atual)
+    for (let ano = anoAtual; ano >= 1930; ano--) {
+      const option = document.createElement('option');
+      option.value = ano;
+      option.textContent = ano;
+      selectFabricacao.appendChild(option);
+    }
+    
+    // Modelo (1930 até ano atual + 1)
+    for (let ano = anoAtual + 1; ano >= 1930; ano--) {
+      const option = document.createElement('option');
+      option.value = ano;
+      option.textContent = ano;
+      selectModelo.appendChild(option);
+    }
+
+    // Validação do formulário
+  </script>
 </body>
 </html>
