@@ -265,6 +265,9 @@ img {
   background-color: var(--cor-complementar);
   color: #fff;
   border:none;
+  width: auto;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .anuncios button:hover {
@@ -584,6 +587,42 @@ img {
   width: 80px;
   padding: 0.5rem;
 }
+button.botao-vender-pagina {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  align-items: center;
+  margin: 20% auto;;
+  border-radius: 30px;
+  padding: 15px 75px;
+  background-color: var(--cor-complementar);
+  color: #fff;
+  border:none;
+  width: auto;
+  text-align: center;
+  white-space: nowrap;
+}
+
+button.botao-vender-pagina:hover {
+  background-color: #585858 !important;
+}
+.container-carro {
+  display: block;
+  flex-wrap: wrap; /* caso queira responsividade */
+  gap: 20px;
+}
+
+.form-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 30px auto;
+  background-color: var(--cor-fundo-claro);
+  padding: 20px 0px 20px 35px;
+  border-radius: 10px;
+  border: 2px solid var(--cor-complementar);
+  box-sizing: border-box;
+}
 
 
 /* responsividade */
@@ -665,9 +704,14 @@ img {
     padding: 12px;
     margin: auto;
   }
+  button.botao-vender-pagina {
+    padding: 0.75rem 9rem; /* Reduz o padding */
+    min-width: 10rem; /* Reduz a largura mínima */
+    font-size: 0.9rem; /* Reduz o tamanho da fonte */
+  }
 
 }
-@media (max-width: 720px) {  
+@media (max-width: 720px) { 
   .container-slider {
     min-height: 61vh;
   }
@@ -812,6 +856,15 @@ img {
   .form-container h1 {
     font-size: 1.5rem;
   }
+  button.botao-vender-pagina {
+    padding: 0.625rem 10rem; 
+    min-width: 8rem; 
+    font-size: 0.8rem; 
+    width: 100%; 
+    max-width: 15rem; 
+    border-radius: 1.25rem;
+  }
+
 }
 @media (max-width: 340px) {
   .container-slider {

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>OVG Veiculos</title>
+  
+</head>
+<body>
+  
+  <!--nav bar-->
+  <header class="header">
+    <nav class="nav">
+      <img src="logo mirela-Photoroom.png" class="logo" >
+      <button class="hamburger" aria-label="Menu">
+        <span></span>
+
+      </button>
+      <ul class="nav-list">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="adicionarVeiculo.html">ADICIONAR VEICULOS</a></li>
+        <li><a href="HistoriocoDeVendas.html">HISTORICO DE VENDAS</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector(".nav");
+
+    hamburger.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
+  <!--fim da nav bar-->
+    <main class="hero">
+        <h2 class="texto_inicio">Selecione o veiculo que foi vendido</h2>
+
+        <section class="anuncios">
+            <div class="">
+                <a href="VenderVeiculosDescricao.html" class="card-link">
+                
+                    <img src="imagens/jetta.png" />
+                    <h3>VOLKSWAGEN JETTA</h3>
+                    <p>Ano:2020</p>
+                    <p>KM:39.000</p>
+                    <h2>R$:179.991,00</h2>
+                    <button class="botao-vender-pagina">
+                        <p>VENDER VEICULO</p>
+                    </button>
+                </a>
+            </div>
+            <div class="">
+                <a href="VenderVeiculosDescricao.html" class="card-link">
+                
+                    <img src="imagens/jetta.png" />
+                    <h3>VOLKSWAGEN JETTA</h3>
+                    <p>Ano:2020</p>
+                    <p>KM:39.000</p>
+                    <h2>R$:179.991,00</h2>
+                    <button class="botao-vender-pagina">
+                        <p>VENDER VEICULO</p>
+                    </button>
+                </a>
+            </div>
+            <div class="">
+                <a href="VenderVeiculosDescricao.html" class="card-link">
+                
+                    <img src="imagens/jetta.png" />
+                    <h3>VOLKSWAGEN JETTA</h3>
+                    <p>Ano:2020</p>
+                    <p>KM:39.000</p>
+                    <h2>R$:179.991,00</h2>
+                    <button class="botao-vender-pagina"> 
+                        <p>VENDER VEICULO</p>
+                    </button>
+                </a>
+            </div>
+        </section>
+
+    </main>
+  
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav");
+  
+      hamburger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+  </body>
+  </html>
