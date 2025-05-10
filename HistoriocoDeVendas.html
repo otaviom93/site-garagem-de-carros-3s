@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Historico De Vendas</title>
+</head>
+<body>
+    <body>
+        <!--nav bar-->
+        <header class="header">
+            <nav class="nav">
+            <img src="logo mirela-Photoroom.png" class="logo" >
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+
+            </button>
+            
+            <ul class="nav-list">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="#">VENDER VEICULO</a></li>
+
+            </ul>
+            </nav>
+        </header>
+        <script>
+            const hamburger = document.querySelector(".hamburger");
+            const nav = document.querySelector(".nav");
+
+            hamburger.addEventListener("click", () => {
+            nav.classList.toggle("active");
+            });
+        </script>
+        <!--fim da nav bar-->
+        <div class="historico-vendas">
+            <h2 class="texto_inicio">HISTORICO DE VENDAS</h2>
+
+            <table class="historico-table">
+              <thead>
+                <tr>
+                  <th>Foto</th>
+                  <th>Modelo</th>
+                  <th>Ano</th>
+                  <th>Preço Inicial</th>
+                  <th>Vendido por</th>
+                  <th>Teve troca?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Foto"><img src="imagens/jetta.png" ></td>
+                  <td data-label="Modelo">Fiat Uno</td>
+                  <td data-label="Ano">2012</td>
+                  <td data-label="Preço Inicial">R$ 18.000</td>
+                  <td data-label="Vendido por">R$ 16.500</td>
+                  <td data-label="Teve troca?">Sim</td>
+                </tr>
+                <tr>
+                    <td data-label="Foto"><img src="imagens/jetta.png" ></td>
+                    <td data-label="Modelo">Fiat Uno</td>
+                    <td data-label="Ano">2012</td>
+                    <td data-label="Preço Inicial">R$ 18.000</td>
+                    <td data-label="Vendido por">R$ 16.500</td>
+                    <td data-label="Teve troca?">Sim</td>
+                  </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+              </tbody>
+            </table>
+          </div>
+      
+
+</body>
+</html>

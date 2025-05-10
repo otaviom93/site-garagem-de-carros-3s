@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OVG Veiculos</title>
+  
+</head>
+<body>
+  <!--nav bar-->
+  <header class="header">
+    <nav class="nav">
+      <img src="logo mirela-Photoroom.png" class="logo" >
+      <button class="hamburger" aria-label="Menu">
+        <span></span>
+
+      </button>
+      <ul class="nav-list">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="#">VENDER VEICULO</a></li>
+        <li><a href="#">HISTORICO DE VENDAS</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector(".nav");
+
+    hamburger.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
+  <!--fim da nav bar-->
+  <!--carrossel-->
+  <div class="section-veiculo">
+    <div class="container-slider">
+      <button id="prev-button"><img src="arrow.png" ></button>
+      <div class="container-images">
+          <img src="imagens/jetta.png"  class="slider on">
+          <img src="imagens/jetta2.png"  class="slider">
+          <img src="imagens/jetta3.png"  class="slider">
+          <img src="imagens/jetta4.png"  class="slider">
+      </div>
+      <button id="next-button"><img src="arrow.png"></button>
+  </div>
+  <script>
+      const slider = document.querySelectorAll('.slider');
+      const btnprev = document.getElementById('prev-button');
+      const btnnext = document.getElementById('next-button');
+
+      let currentSlide = 0;
+
+      function esconderSlider() {
+          slider.forEach(item => item.classList.remove('on'));
+      }
+
+      function mostrarSlider() {
+          slider[currentSlide].classList.add('on');
+      }
+
+      function nextSlider() {
+          esconderSlider();
+          if (currentSlide === slider.length - 1) {
+              currentSlide = 0;
+          } else {
+              currentSlide++;
+          }
+          mostrarSlider();
+      }
+
+      function prevSlider() {
+          esconderSlider();
+          if (currentSlide === 0) {
+              currentSlide = slider.length - 1;
+          } else {
+              currentSlide--;
+          }
+          mostrarSlider();
+      }
+
+      btnnext.addEventListener('click', nextSlider);
+      btnprev.addEventListener('click', prevSlider);
+  </script>
+    <!--fim do carrossel-->
+    <!--destaque veiculos-->
+      <div class="carro-destaque">
+          <h1><span class="brand">VOLKSWAGEN</span> <span class="model">JETTA</span></h1>
+          <p class="version">2.0 350 TSI GASOLINA GLI DSG</p>
+      
+          <div class="info">
+          <div><span class="label">Cidade</span><strong>São Paulo - SP</strong></div>
+          <div><span class="label">Ano</span><strong>2020/2020</strong></div>
+          <div><span class="label">KM</span><strong>39.000</strong></div>
+          <div><span class="label">Câmbio</span><strong>Automática</strong></div>
+          <div><span class="label">Carroceria</span><strong>Sedã</strong></div>
+          <div><span class="label">Combustível</span><strong>Gasolina e álcool</strong></div>
+          <div><span class="label">Final de placa</span><strong>8</strong></div>
+          <div><span class="label">Cor</span><strong>Preto</strong></div>
+          <div><span class="label">Aceita troca</span><strong>Sim</strong></div>
+          <div><span class="label">Único dono</span><strong>Sim</strong></div>
+          <div><span class="label">IPVA pago</span><strong>Sim</strong></div>
+          <div><span class="label">Licenciado</span><strong>Sim</strong></div>
+          </div>
+      </div>
+      <!--fim dos destaque veiculos-->
+      <!--itens do veiculos-->
+    </div>
+      <div class="itens-veiculo">
+          <p class="titulo-itens">Itens de veículo</p>
+          <ul class="lista-itens">
+            <li>Airbag</li>
+            <li>Alarme</li>
+            <li>Ar quente</li>
+            <li>Banco com regulagem de altura</li>
+            <li>Computador de bordo</li>
+            <li>Controle de tração</li>
+            <li>Desembaçador traseiro</li>
+            <li>Ar condicionado</li>
+            <li>Encosto de cabeça traseiro</li>
+            <li>Freio ABS</li>
+            <li>Controle automático de velocidade</li>
+            <li>Retrovisores elétricos</li>
+            <li>Rodas de liga leve</li>
+            <li>Sensor de estacionamento</li>
+            <li>Retrovisor fotocrômico</li>
+            <li>Travas elétricas</li>
+            <li>Vidros elétricos</li>
+            <li>Volante com regulagem de altura</li>
+            <li>Bancos em couro</li>
+            <li>GPS</li>
+          </ul>
+        </div>
+      
+</body>
