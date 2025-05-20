@@ -247,6 +247,7 @@ img {
   background-color: #fff;
   border-radius: 10px;
   border-color: var(--cor-complementar);
+  max-width: 33%;
 }
 
 .anuncios h2,
@@ -720,7 +721,15 @@ button.botao-vender-pagina:hover {
     padding: 0px 16px 17rem 10px;
   }
 }
+@media (max-width: 950px) {
+  .anuncios > div {
+    max-width: 40%;
+}
+}
 @media (max-width: 850px) {
+  .anuncios > div {
+    max-width: 50%;
+}
   .carro-destaque {
     max-width: 420px;
   }
@@ -782,6 +791,9 @@ button.botao-vender-pagina:hover {
   }
 }
 @media (max-width: 720px) { 
+    .anuncios > div {
+    max-width: 60%;
+}
   .container-slider {
     min-height: 61vh;
   }
@@ -855,6 +867,9 @@ button.botao-vender-pagina:hover {
   }
 }
 @media (max-width: 570px) {  
+  .anuncios > div {
+    max-width: 80%;
+}
   .container-slider {
   min-height: 50vh;
 
@@ -865,6 +880,9 @@ button.botao-vender-pagina:hover {
 
 }}
 @media (max-width: 440px) {
+  .anuncios > div {
+    max-width: 100%;
+}
   .container-slider {
     min-height: 25vh;
 
