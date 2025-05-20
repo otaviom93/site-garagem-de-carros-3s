@@ -2,13 +2,12 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>OVG Veiculos</title>
   
 </head>
 <body>
-  
   <!--nav bar-->
   <header class="header">
     <nav class="nav">
@@ -20,12 +19,12 @@
       <ul class="nav-list">
         <li><a href="indexadm.html">INICIO</a></li>
         <li><a href="adicionarVeiculo.html">ADICIONAR VEICULOS</a></li>
+        <li><a href="VenderVeiculos.html">VENDER VEICULO</a></li>
         <li><a href="HistoriocoDeVendas.html">HISTORICO DE VENDAS</a></li>
       </ul>
     </nav>
   </header>
   <script>
-    
     const hamburger = document.querySelector(".hamburger");
     const nav = document.querySelector(".nav");
 
@@ -34,8 +33,8 @@
     });
   </script>
   <!--fim da nav bar-->
-   <!--carrossel-->
-   <div class="section-veiculo">
+  <!--carrossel-->
+  <div class="section-veiculo">
     <div class="container-slider">
       <button id="prev-button"><img src="arrow.png" ></button>
       <div class="container-images">
@@ -46,7 +45,6 @@
       </div>
       <button id="next-button"><img src="arrow.png"></button>
   </div>
-   
   <script>
       const slider = document.querySelectorAll('.slider');
       const btnprev = document.getElementById('prev-button');
@@ -106,81 +104,36 @@
           <div><span class="label">Licenciado</span><strong>Sim</strong></div>
           </div>
       </div>
-    </div>
       <!--fim dos destaque veiculos-->
-      <div class="form-container">
-        <form id="vendaForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="troca">Terá veículo na troca?</label>
-              <select id="troca" required>
-                <option value="" disabled selected>Selecione</option>
-                <option value="sim">Sim</option>
-                <option value="nao">Não</option>
-              </select>
-            </div>
-      
-            <div class="form-group">
-              <label for="valorDinheiro">Valor de venda (R$)</label>
-              <input type="number" id="valorDinheiro" min="0" step="0.01" placeholder="00.000,00" required>
-            </div>
-          </div>
-      
-          <!-- Grupo da Troca (só aparece se Sim) -->
-          <div id="grupoTroca" class="valor-group">
-            <div class="form-group">
-              <label for="valorTroca">Valor do veículo na troca (R$)</label>
-              <input type="number" id="valorTroca" min="0" step="0.01" placeholder="00.000,00">
-            </div>
-      
-            <div class="form-group">
-              <label for="descricaoTroca">Descrição do veículo na troca</label>
-              <input type="text" id="descricaoTroca" placeholder="Ex: Corsa 2010 preto, bom estado">
-            </div>
-          </div>
-            <a href="index.html">
-            <button type="submit" id="btnConfirmar">CONFIRMAR VENDA</button>
-            </a>
-        </form>
+      <!--itens do veiculos-->
+    </div>
+      <div class="itens-veiculo">
+          <p class="titulo-itens">Itens de veículo</p>
+          <ul class="lista-itens">
+            <li>Airbag</li>
+            <li>Alarme</li>
+            <li>Ar quente</li>
+            <li>Banco com regulagem de altura</li>
+            <li>Computador de bordo</li>
+            <li>Controle de tração</li>
+            <li>Desembaçador traseiro</li>
+            <li>Ar condicionado</li>
+            <li>Encosto de cabeça traseiro</li>
+            <li>Freio ABS</li>
+            <li>Controle automático de velocidade</li>
+            <li>Retrovisores elétricos</li>
+            <li>Rodas de liga leve</li>
+            <li>Sensor de estacionamento</li>
+            <li>Retrovisor fotocrômico</li>
+            <li>Travas elétricas</li>
+            <li>Vidros elétricos</li>
+            <li>Volante com regulagem de altura</li>
+            <li>Bancos em couro</li>
+            <li>GPS</li>
+          </ul>
+        </div>
+      <div class="buttons_descriçao">
+        <button type="submit">Editar Veículo</button>
+        <button type="submit">Excluir Veículo</button>
       </div>
-
-    <script>
-        const selectTroca = document.getElementById('troca');
-        const grupoTroca = document.getElementById('grupoTroca');
-        const btnConfirmar = document.getElementById('btnConfirmar');
-        const valorDinheiro = document.getElementById('valorDinheiro');
-        grupoTroca.style.display = 'none';
-        btnConfirmar.style.display = 'none';
-        
-        selectTroca.addEventListener('change', function() {
-            if(this.value === 'sim') {
-                grupoTroca.style.display = 'block';
-                document.getElementById('valorTroca').setAttribute('required', '');
-            } else {
-                grupoTroca.style.display = 'none';
-                document.getElementById('valorTroca').removeAttribute('required');
-            }
-            
-            
-            btnConfirmar.style.display = 'block';
-        });
-        
-        document.getElementById('vendaForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const temTroca = selectTroca.value === 'sim';
-            const valorVenda = parseFloat(valorDinheiro.value) || 0;
-            
-            
-            
-            if(temTroca) {
-                const valorTroca = parseFloat(document.getElementById('valorTroca').value) || 0;
-
-            }
-            
-            window.location.href = 'index.html';
-            
-        });
-    </script>
 </body>
-</html>
